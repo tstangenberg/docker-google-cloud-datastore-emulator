@@ -15,7 +15,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: google-cloud-datastore-emulator
+  IMAGE_NAME: tomfrom42talents/google-cloud-datastore-emulator
 
 jobs:
   build:
@@ -55,6 +55,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
