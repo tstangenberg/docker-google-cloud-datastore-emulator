@@ -13,7 +13,7 @@ Or in a `docker-compose.yml`
 datastore:
   image: docker.io/tomfrom42talents/google-cloud-datastore-emulator:latest
   environment:
-    - CONSISTENCY: 1 # If you omit this, the emulator will emulate eventual consistency.
+    - CONSISTENCY=1 # If you omit this, the emulator will emulate eventual consistency.
 worker:
   build: .
   environment:
@@ -29,6 +29,8 @@ worker:
 DATA_DIR
 
 HOST_PORT
+
+GCLOUD_PROJECT
 
 CONSISTENCY
 
