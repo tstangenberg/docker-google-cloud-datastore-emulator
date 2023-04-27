@@ -26,6 +26,10 @@ worker:
 
 ## Options
 
+DATA_DIR
+
+HOST_PORT
+
 CONSISTENCY
 
 IN_MEMORY
